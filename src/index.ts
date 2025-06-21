@@ -1,17 +1,22 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import path from 'path';
-import {corsConfigurate} from './config'
+import {corsConfigurate} from './config';
+import {PingController} from '@controllers/PingController';
 
 dotenv.config({path: path.resolve(__dirname, '../.env')});
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(corsConfigurate)
-// Тестовый роут
-app.get('/', (_req, res) => {
-  res.send('Bridge between Telegram & Discord is running 🚀');
+const pingController = new PingController(Number(process.env.TG_CHAT_ID), process.env.DS_CHAT_ID || '', Number(process.env.TG_TOPIC_ID));
+
+app.use(corsConfigurate);
+
+pingController.init();
+
+app.get('/', async (req, res) => {
+  return await pingController.status(req, res);
 });
 
 // Запуск Express-сервера
