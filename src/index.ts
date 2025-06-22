@@ -15,6 +15,7 @@ app.use(corsConfigurate);
 
 pingController.init();
 
+// @ts-ignore
 app.get('/', async (req, res) => {
   return await pingController.status(req, res);
 });
