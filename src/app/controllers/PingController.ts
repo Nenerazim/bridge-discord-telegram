@@ -24,6 +24,10 @@ export class PingController {
     if (message.author.bot) {
       return;
     }
+
+    if (message.channelId !== process.env.DS_CHAT_ID) {
+      return
+    }
     await this.useCaseTg
       .sendMessage(message.content, {message_thread_id: Number(process.env.TG_TOPIC_ID)})
       .then(() => {
