@@ -1,4 +1,4 @@
-import {DiscordDataSource} from '../datasources/DiscordDatasources.ts';
+import {DiscordDataSource} from '../datasources/DiscordDatasources';
 import {TextChannel, Message, MessageCreateOptions} from 'discord.js';
 
 export class DiscordPingRepository {

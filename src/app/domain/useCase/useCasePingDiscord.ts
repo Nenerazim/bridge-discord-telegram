@@ -1,5 +1,5 @@
 import {Message} from 'discord.js';
-import {DiscordPingRepository} from 'app/data/repositories/DiscordPingRepository.ts';
+import {DiscordPingRepository} from 'app/data/repositories/DiscordPingRepository';
 
 export class DiscordMessageLoggerUseCase {
   private repository: DiscordPingRepository;

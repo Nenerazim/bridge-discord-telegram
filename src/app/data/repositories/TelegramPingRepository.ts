@@ -1,5 +1,5 @@
 import TelegramBot from 'node-telegram-bot-api';
-import {TelegramDatasources} from '../datasources/TelegramDatasources.ts';
+import {TelegramDatasources} from '../datasources/TelegramDatasources';
 
 export class TelegramPingRepository {
   private datasourse: TelegramBot;
