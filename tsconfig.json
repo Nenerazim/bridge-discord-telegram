@@ -13,6 +13,5 @@
       "app/*": ["app/*"]
     }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["src", "*.config.d.ts", "tailwind.config.ts"],
 }
