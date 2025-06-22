@@ -18,12 +18,6 @@ export class PingController {
   private async loggerTsMessage(message: TelegramBot.Message) {
     await this.useCaseDs
       .sendMessage(message.text || 'Пустое сообщение')
-      .then(async () => {
-        await this.useCaseTg.sendMessage('👍', {reply_to_message_id: message.message_id});
-      })
-      .catch(async () => {
-        await this.useCaseTg.sendMessage('👎', {reply_to_message_id: message.message_id});
-      });
   }
 
   private async loggerDsMesage(message: Message) {
@@ -31,7 +25,7 @@ export class PingController {
       return;
     }
     await this.useCaseTg
-      .sendMessage(message.content, {message_thread_id: 2})
+      .sendMessage(message.content, {message_thread_id: Number(process.env.TG_TOPIC_ID)})
       .then(() => {
         message.react('👍');
       })

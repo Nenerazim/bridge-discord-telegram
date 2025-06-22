@@ -18,6 +18,8 @@ export class UseCasePingTelegram {
         return;
       }
       console.log('chatId')
+      console.log(message.chat.id)
+      console.log('thread_id')
       console.log(message.message_thread_id)
       if (this.tgChanelId === message.chat.id &&  message.message_thread_id === this.thread) {
         callback(message, metadata);
