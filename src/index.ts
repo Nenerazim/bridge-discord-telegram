@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import path from 'path';
 import {corsConfigurate} from './config';
-import {PingController} from '@controllers/PingController';
+import {PingController} from './app/controllers/PingController';
 
 dotenv.config({path: path.resolve(__dirname, '../.env')});
 

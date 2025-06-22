@@ -9,14 +9,6 @@
     "strict": true,
     "skipLibCheck": true,
     "baseUrl": "./src",
-    "paths": {
-      "@common/*": ["common/*"],
-      "@routes/*": ["app/routes/*"],
-      "@controllers/*": ["app/controllers/*"],
-      "@entity/*": ["app/domain/entity/*"],
-      "@useCase/*": ["app/domain/useCase/*"],
-      "@repository/*": ["app/data/repositories/*"]
-    }
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]

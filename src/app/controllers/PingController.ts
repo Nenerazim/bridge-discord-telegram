@@ -1,5 +1,5 @@
-import { DiscordMessageLoggerUseCase } from '@useCase/UseCasePingDiscord';
-import {UseCasePingTelegram} from '@useCase/UseCasePingTelegram';
+import { DiscordMessageLoggerUseCase } from '../../app/domain/useCase/UseCasePingDiscord';
+import {UseCasePingTelegram} from '../../app/domain/useCase/UseCasePingTelegram';
 import {Message} from 'discord.js';
 import {Request, Response} from 'express';
 import TelegramBot from 'node-telegram-bot-api';

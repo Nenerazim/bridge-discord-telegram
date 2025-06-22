@@ -1,4 +1,4 @@
-import {TelegramPingRepository} from '@repository/TelegramPingRepository';
+import {TelegramPingRepository} from '../../data/repositories/TelegramPingRepository';
 import TelegramBot from 'node-telegram-bot-api';
 
 export class UseCasePingTelegram {
